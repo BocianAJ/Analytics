@@ -1,0 +1,999 @@
+/* Spis treœci: */
+/* 1.0 Style ogólne */
+/*   1.1 Style jednorazowe */
+/*   1.2 Style wielorazowe */
+/*    1.2.1 Flex */
+/*    1.2.2 T³o-obraz */
+/*    1.2.3 Dynamiczny kontent */
+/* 2.0 Header g³ówny */
+/* 	 2.1 Menu g³ówne */
+/* 3.0 Kontent g³ówny */
+/* 	3.1 Sekcja header */
+/* 	3.2 Sekcja Oferta */
+/* 	 3.2.1 Podsekcja 'Lorem ipsum' */
+/* 	 3.2.2 Podsekcja 'Abonamenty' */
+/* 	 3.2.3 Podsekcja 'Stopka' */
+/* 	3.3 Sekcja 'Dlaczego My' */
+/* 	 3.3.1 Podsekcja 'Lorem ipsum' */
+/* 	 3.3.2 Podsekcja 'Wyró¿nia nas' */
+/* 	 3.3.3 Podsekcja 'Referencje' */
+/* 	 3.3.4 Podsekcja 'Stopka' */
+/*  3.4 Sekcja "Proces' */
+/* 	 3.3.1 Podsekcja 'Jak wygl¹da nasza praca' */
+/* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
+/*  3.5 Sekcja "Kontakt' */
+/* 4.0 Stopka g³ówna */
+/* 5.0 Responsywnoœæ*/
+
+
+/* 1.0 Style ogólne */
+/*   1.1 Style jednorazowe */
+	* {
+		box-sizing:border-box;
+		font-weight:300;
+		margin:0;
+		padding:0;
+	}
+
+	body {
+		font-size:16px;
+		color:#8A8A8A;
+		font-family:sans-serif;
+	}
+
+	button { font-size:1em;}
+	button:hover, button:focus, button:active,
+	input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+		cursor:pointer;
+	}
+
+
+	h1, h2, h3, h4, h5, h6 {
+		text-transform:uppercase;
+		margin:1em 0;
+	} 
+	a , button {
+		text-decoration:none;
+		text-transform:uppercase;
+		color:#292929;
+		padding:0.6em 0.8em;
+		display:inline-block;
+		font-size: 1em;
+	}
+	section {
+		padding:4em 0 0;
+	}
+
+	h1 { 
+		font-size:2.2em;
+		color:#292929;
+		display:inline-block;
+		margin-bottom:0.25em;
+	}
+	h1:after { 
+		content: "";
+		display: block;
+		border-top: solid 0.08em #c4c4c4;
+		width: 1.2em;
+		margin: 0.25em auto 0;
+	}
+	h2 { 
+		font-size:1.8em;
+		color:#8A8A8A;
+		display:inline-block;
+		padding: 0.8em 1.2em;
+		}
+	h3 { 
+		font-size:1.4em;
+		color:#292929;
+		text-align:center;
+		}
+	h4 { 
+		font-size:1.2em;
+		color:#292929;
+		}
+	h5 { font-size:1.1em;}
+	h6 { font-size:1.05em;}
+
+	li {
+		margin:1em 0;
+		list-style-position: outside;
+		padding-left: 0.5em;
+	}
+
+/*   1.2 Style wielorazowe */
+	.center-tresc {
+		margin:0 auto;
+		max-width:1250px;
+		padding:1em;
+	}
+	.przycisk {
+		border-style:solid; 
+		border-width:2px;
+		padding:0.6em 1.5em;
+		display:inline-block;
+		border-color:#c4c4c4;
+		background-color:#fff;
+		font-size: 1em;
+		line-height: 1em;
+	}
+	.grad-czerw, .active-btn:hover, .active-btn:focus, .active-btn:active {
+		background: #ff5200; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left, #ffb900, #ff5200); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, #ffb900, #ff5200); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, #ffb900, #ff5200); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right, #ffb900, #ff5200); /* Standard syntax */
+		box-shadow:	1px 1px 4px 1px rgba(255,99,0,0.25);
+	}
+	.grad-szary, .active-btn {
+		background: #c4c4c4; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left, #8A8A8A, #c4c4c4); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, #8A8A8A, #c4c4c4); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, #8A8A8A, #c4c4c4); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right, #8A8A8A, #c4c4c4); /* Standard syntax */
+		box-shadow:	1px 1px 4px 1px rgba(138,138,138,0.25);
+	}
+	.rama {
+		display:inline-block;
+		padding:1px;
+		border:none;
+		margin:auto;
+	}
+	.rama > * {
+		height:100%;
+		border:none;
+		background-color:#fff;
+		padding:0.8em 1.2em;
+		display: inline-block;
+	}
+	button.kolko {
+		width: 2em;
+		height: 2em;
+		margin: 1em;
+		border-radius: 1em;
+		background-color: #8A8A8A;
+		color: #fff;
+		border: none;
+		font-size: 1em;
+		align-self: flex-end;
+		-webkit-align-self: flex-end;
+		transition: background-color ease 1s;
+		padding:0;
+	}
+	button.kolko:hover, button.kolko:focus, button.kolko:active {
+		background-color:#ff5200;
+		transition: background-color ease-out 0.5s;
+	}
+	.czerw-blask, .czarn-pogrub {
+		font-size:2.5em;
+		font-weight:600;
+		vertical-align: middle;
+	}
+	.czerw-blask {
+		color:#ff5200;
+		text-shadow:0 0 10px #ffb900;
+	}
+	.czarn-pogrub {
+		color:#292929;
+	}
+	.bialy-txt {
+		color:#fff;
+	}
+/*		1.2.1 Flex */
+		.flex-opakowanie {
+			display:block;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-align-content:flex-start;
+			align-content: flex-start;
+			-webkit-justify-content: space-around; 
+			justify-content: space-around;
+		  }
+		  .center-tresc > .flex-opakowanie {
+			 -webkit-justify-content: space-between; 
+			justify-content: space-between; 
+		  }
+		  .flex-srodek {
+			  align-items: center;
+			 -webkit-align-items: center;
+		  }
+		  .center-tresc > .flex-opakowanie.flex-kol {
+			-webkit-justify-content: space-around; 
+			justify-content: space-around;
+		  }
+		  .flex-kol {
+			-webkit-flex-direction:column;
+			flex-direction: column;
+			 -webkit-align-items:flex-start;
+			align-items: flex-start;
+			-webkit-justify-content:flex-start;
+			justify-content:flex-start;
+			text-align:center;
+		  }
+		  .flex-kol > * {
+			  max-width:100%;
+		  }
+		  .flex-2kol > * {
+			  width:48%;
+			  float:left; /* Flex fallback for older browsers */
+			  margin-left:1%;
+			  margin-right:1%;
+		  }
+		  .flex-6kol > *, .flex-3kol > * {
+			  width:30%;
+			  max-width:400px;
+			  float:left; /* Flex fallback for older browsers */
+			  margin-left:1.65%;
+			  margin-right:1.65%;
+		  }
+		  .flex-4kol > * {
+			  width:22%;
+			  float:left; /* Flex fallback for older browsers */
+			  margin-left:1.5%;
+			  margin-right:1.5%;
+		  }
+		  @media (max-width:800px) {
+			.center-tresc > .flex-opakowanie.flex-3kol, .center-tresc > .flex-opakowanie.flex-2kol {
+				-webkit-justify-content: space-around; 
+				justify-content: space-around;
+			}
+			.flex-3kol > *, .flex-2kol > * {
+			  width:98%;
+			  margin-left:auto;
+			  margin-right:auto;
+			  float:none;
+			  display:block;
+			  max-width:400px;
+			}
+			.flex-6kol > *, .flex-4kol > * {
+			  width:48%;
+			  margin-left:1%;
+			  margin-right:1%;
+			}
+			.flex-kol > * {
+				max-width: 400px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		  }
+		  @media (max-width:600px) {
+			.center-tresc > .flex-opakowanie.flex-6kol , .center-tresc > .flex-opakowanie.flex-4kol {
+				-webkit-justify-content: space-around; 
+				justify-content: space-around;
+			}
+			.flex-6kol > *, .flex-4kol > * {
+			  width:98%;
+			  margin-left:auto;
+			  margin-right:auto;
+			  float:none;
+			  max-width:400px;
+			}
+		  }
+		  .flex-clearfix { 
+			clear:both;	/* Flex clearfix */ 
+		  }
+		   .flex-clearfix2:after {
+			content:"";/* Another Flex clearfix */
+			clear:both;
+			display:table;
+		  }
+/*  	1.2.2 T³o-obraz */
+		.tlo-obraz {
+			background-repeat:no-repeat;
+			background-size:cover;
+			background-position:center right;
+		}
+/* 		1.2.3 Dynamiczny kontent */
+		.ukryty-content, .js-content {
+			display:none;
+		}
+/* 2.0 Header g³ówny */
+	.header-glowny {
+		border-bottom:solid 1px #cfcfcf;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.95);
+		z-index: 100;
+	}
+	img.logo {
+		padding:0.5em 0;
+		width:auto; 
+		height:4em;
+		float:left;
+		background: #fff;
+	}
+	.header-glowny .flex-opakowanie {
+		-webkit-justify-content:space-between;
+		justify-content:space-between;
+	}
+/*	2.1 Menu g³ówne */
+	.header-glowny a {
+		font-weight:600;
+		padding-top:0;
+		padding-bottom:0;
+	}
+	.header-glowny a:focus, .header-glowny a:hover, .header-glowny a:active  {
+		color:#ff5200;
+	}
+	a.tel {
+		color:#ff5200;
+		transition:transform 1s;
+		float:left;
+		height:4em;
+		line-height:4em;
+		padding:0 1em 0 0;
+	}
+	nav {
+		display: inline-block;
+		float:left;
+		height: 4em;
+		line-height: 4em;
+		vertical-align: top;
+		padding:0 2em;
+	}
+	a.tel:focus, a.tel:hover, a.tel:active {
+		transform:scale(1.1);
+		transition:transform 0.5s ease-out;
+	}
+	@media (max-width:800px) {
+		nav  {
+			padding:0 1em;
+		}
+		a.tel {
+			padding:0;
+		}
+	}
+	@media (max-width:600px) {
+		a.tel {
+			display:none;
+		}
+		nav {
+			position: absolute;
+			top: 0;
+			bottom:0;
+			right: 0;
+			height: auto;
+			padding: 0;
+			line-height: initial;
+			margin:0.5em;
+			cursor:pointer;
+			width:3em;
+		}
+		nav a {
+			display: list-item;
+			list-style: none;
+			text-align: left;
+			display:list-item;
+			visibility:hidden;
+		}
+		nav:before {
+			content: url("./grafika/ikony/mobile-menu.svg");
+			color: #8A8A8A;
+			display: block;
+			width: 3em;
+			height: auto;
+			margin: auto;
+			transition:transform 1s ease-in;
+			float:right;
+		}
+		nav:hover, nav:focus, nav:active {
+			bottom:auto;
+			padding:0 0 1em;
+			border: 1px solid #ff6300;
+			margin:1px;
+			background: rgba(255,255,255,0.95);
+			width:auto;
+		}
+		nav:hover a, nav:focus a, nav:active a {
+			visibility:visible;
+			padding:1em;
+		}
+		nav:hover:before, nav:focus:before, nav:active:before {
+			transform: scale(0);
+			transition:transform 0.5s ease-out;
+		}
+	}
+/* 3.0 Kontent g³ówny */
+	.header-glowny div.center-tresc {
+		padding-top:0;
+		padding-bottom:0;
+		text-align: center;
+		position: relative;
+	}
+/* 	3.1 Sekcja header */
+	.sekcja-header {
+		background-image:url("./grafika/headermobile-bg.jpg");
+		padding:6% 0 0;
+		background-size:contain;
+		background-position: center 25%;
+	}
+	.sekcja-header  p {
+		padding:0 0 2em;
+		font-size: 1.6em;
+		text-transform:uppercase;
+	}
+	.naglowek {
+		display: block;
+		padding: 0;
+		text-align: center;
+		margin-top: 75vw;
+		background: linear-gradient(to left ,rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,1));
+	}
+	.naglowek .flex-opakowanie {
+		justify-content: center;
+		-webkit-justify-content: center;
+	}
+	.sekcja-header a {
+		margin-bottom:1em;
+	}
+	.sekcja-header a:first-of-type {
+		margin-right:2em;
+	}
+	@media (min-width:450px) {
+		.sekcja-header {
+			background-image:url("./grafika/header-bg.jpg");
+			background-position:left center;
+			background-size:auto 100%;
+		}
+		.naglowek {
+			display:inline-block;
+			padding-top:6%;
+			padding-right:10%;
+			text-align:left;
+			margin-top:0;
+		}
+		.naglowek .flex-opakowanie {
+			justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+		}
+	}
+	@media (min-width:1000px) {
+		.sekcja-header {
+			background-position:right center;
+		}
+	}
+	@media (max-width:220px) {
+		.sekcja-header a:first-of-type {
+			margin-right:auto;
+		}
+	}
+/* 	3.2 Sekcja Oferta */
+	#oferta footer {
+		margin-top:2em;
+		background-image: url("./grafika/napisz.jpg");
+	}
+	#oferta footer div.flex-opakowanie {
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-align-content: center;
+		align-content: center;
+	}
+	#oferta footer h3 {
+		margin-top:0;
+		text-transform: none;
+		margin-left:auto;
+		margin-right:auto;
+	}
+/* 	 	3.2.1 Podsekcja 'Lorem ipsum' */
+		#oferta .sekcja-poziom2:first-of-type .sekcja-poziom3 > img {
+			width: 30%;
+			max-height: 60px;
+			max-width: 60px;
+			padding-right: 1em;
+		}
+		@media (max-width:800px) {
+			#oferta section.sekcja-poziom3 {
+				padding:1em;
+			}
+		}
+		#oferta section.sekcja-poziom3.flex-opakowanie {
+			-webkit-flex-wrap: nowrap;
+			flex-wrap: nowrap;			
+		}
+/*	 	 3.2.2 Podsekcja 'Abonamenty' */
+		#abonamenty > div.flex-opakowanie {
+			align-items: flex-start;
+			-webkit-align-items: flex-start;
+		}
+		#abonamenty .sekcja-poziom3{
+			padding:1em 2em 3em;
+			border:solid 2px #8a8a8a;
+			position:relative;
+		}
+		#abonamenty section.sekcja-poziom3 {
+			background-position:bottom center;
+			background-size:100% auto;
+			background-repeat:no-repeat;
+		}
+		#abonamenty section.sekcja-poziom3:first-of-type {
+			background-image:url('./grafika/abonamenty1.png');
+		}
+		#abonamenty section.sekcja-poziom3:nth-of-type(2) {
+			background-image:url('./grafika/abonamenty2.png');
+		}
+		#abonamenty section.sekcja-poziom3:last-of-type {
+			background-image:url('./grafika/abonamenty3.png');
+		}
+		@media (max-width:800px) {
+			#abonamenty .sekcja-poziom3 {
+				margin-bottom: 5em;
+			}
+			#abonamenty li {
+				list-style:inside;
+			}
+		}
+		#abonamenty h4, #abonamenty a {
+			align-self:center;
+			-webkit-align-self:center;
+		}
+		#abonamenty  strong {
+			text-align: center;
+			width: 100%;
+			padding: 1.6em 0 1em;
+		}
+		#abonamenty p, #abonamenty ul {
+			text-align:left;
+		}
+		div.boks {
+			position:absolute;
+			width:100%;
+			left:0;
+			bottom: -23px;
+			-webkit-justify-content:center;
+			justify-content:center;
+		} 
+
+/* 	 3.2.3 Podsekcja 'Stopka' */
+
+/* 	3.3 Sekcja 'Dlaczego My' */
+
+/* 	 3.3.1 Podsekcja 'Lorem ipsum' */
+	.statystyki h4 {
+		color:#000;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.statystyki em {
+		font-size:3em;
+		font-weight:300;
+		display:block;
+	}
+	.statystyki > div.flex-opakowanie:first-of-type {
+		padding-bottom:2em;
+	}
+	.statystyki section.sekcja-poziom3 {
+		margin:0;
+		padding:0 2px 2px 0;
+		color:#000;
+		float: left;
+	}
+	.statystyki section.sekcja-poziom3:nth-of-type(1) {
+		width: 65%; /* Safari 6.1+ */
+	}
+	.statystyki section.sekcja-poziom3:nth-of-type(2), .statystyki section.sekcja-poziom3:nth-of-type(4), .statystyki section.sekcja-poziom3:nth-of-type(5) {
+		width: 35%; /* Safari 6.1+ */
+	}
+	.statystyki section.sekcja-poziom3:nth-of-type(3) {
+		width: 30%; /* Safari 6.1+ */
+	}
+	.statystyki section.branza  {
+		float:right;
+	}
+	.statystyki .klienci .rama > div {
+		background-image:url('./grafika/klienci.jpg');
+	}
+	.statystyki .realizacji .rama > div {
+		background-image:url('./grafika/realizacji.jpg');
+	}
+	.statystyki .branza .rama > div {
+		background-image:url('./grafika/branza.jpg');
+	}
+	.statystyki .eksperci .rama > div {
+		background-image:url('./grafika/eksperci.jpg');
+	}
+	.statystyki .badan .rama > div {
+		background-image:url('./grafika/badan.jpg');
+	}
+	.statystyki .sekcja-poziom3 .rama > div {
+		background-position:center;
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	.statystyki .rama {
+		width:100%;
+		height:100%;
+		}
+	.statystyki .rama > div {
+		padding:2em;
+		text-align:right;
+		align-items:flex-end;
+		-webkit-align-items:flex-end;
+		-webkit-align-content: flex-end;
+		align-content: flex-end;
+		width:100%;
+		}
+	.statystyki section.sekcja-poziom3:nth-of-type(1) .rama > div > * {
+		max-width:50%;
+	}
+	@media (max-width:700px) {
+		.statystyki .rama > div {
+			padding:1em;
+		}
+		.statystyki section.sekcja-poziom3:nth-of-type(1) .rama > div > * {
+			max-width:100%;
+		}
+	}
+	@media (max-width:500px) {
+		.statystyki section.sekcja-poziom3:nth-of-type(1) {
+			width: 100%;
+		}
+		.statystyki section.sekcja-poziom3:nth-of-type(2), .statystyki section.sekcja-poziom3:nth-of-type(3),
+		.statystyki section.sekcja-poziom3:nth-of-type(4), .statystyki section.sekcja-poziom3:nth-of-type(5) {
+			width: 50%;
+		}
+	}
+	@media (max-width:350px) {
+		.statystyki section.sekcja-poziom3:nth-of-type(2), .statystyki section.sekcja-poziom3:nth-of-type(3),
+		.statystyki section.sekcja-poziom3:nth-of-type(4), .statystyki section.sekcja-poziom3:nth-of-type(5) {
+			width: 100%;
+		}
+	}
+
+/* 	 3.3.2 Podsekcja 'Wyró¿nia nas' */
+	section.wyroznia-nas {
+		background-image:url("./grafika/wyroznia-nas-bg.png");
+		background-position:center;
+		background-size:100%;
+	}
+	.wyroznia-nas section {
+		padding:2em;
+	}
+	.wyroznia-nas h4 {
+		margin-top:0;
+	}
+	.wyroznia-nas .rama {
+		margin-top:1em;
+		margin-bottom:1em;
+	}
+/* 	 3.3.3 Podsekcja 'Referencje' */
+	.referencje .flex-opakowanie {
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		text-align: center;
+	}
+	.referencje img {
+		padding: 2em;
+		margin-bottom: 1em;
+		height: 6em;
+		max-width: 220px;
+	}
+/* 	 3.3.4 Podsekcja 'Stopka' */
+	#dlaczego-my footer {
+		background-image:url("./grafika/zadzwon.jpg");
+		position: relative;
+		margin-top: 6em;
+	}
+	#dlaczego-my footer h3 {
+		text-transform: none;
+		position:relative;
+		z-index: 1;
+	}
+	#dlaczego-my footer h3.flex-opakowanie > * {
+		width:30%;
+		margin-left:1.65%;
+		margin-right:1.65%;
+		float:left;
+	}
+	#dlaczego-my footer a {
+		border:solid 1px #000;
+		background-color:#fff;
+		font-size:0.8em;
+		max-width: 15em;
+		transition:transform 1s;
+	}
+	#dlaczego-my footera:hover, #dlaczego-my footer h3 a:focus, #dlaczego-my footer h3 a:active {
+		transform: scale(1.1);
+	}
+	#dlaczego-my footer a span {
+		display:inline-block;
+	}
+	#dlaczego-my footer a:hover, #dlaczego-my footer a:focus, #dlaczego-my footer a:active  {
+		transform:scale(1.1);
+		transition:transform 1s;
+	}
+	#dlaczego-my footer img {
+		position: absolute;
+		bottom: 0;
+		width: 12em;
+		display: flex;
+		display:-webkit-flex;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+		@media (max-width:450px) {
+		#dlaczego-my footer {
+			margin-top: 0;
+		}
+		#dlaczego-my footer h3.flex-opakowanie > * {
+			width:98%;
+			margin: 0.5em auto;
+			float: none;
+			display: block;
+		}
+		#dlaczego-my footer img {
+			position: relative;
+			width:10em;
+		}
+	}
+	
+/*  3.4 Sekcja "Proces' */
+/* 	 3.3.1 Podsekcja 'Jak wygl¹da nasza praca' */
+	.nasza-praca .sekcja-poziom3.flex-kol {
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+	}
+	.nasza-praca h4 {
+		align-self: center;
+		-webkit-align-self: center;
+	}
+	.nasza-praca h4 span {
+		display:inline-block;
+		padding:0.8em 2em;
+	}
+	.nasza-praca.tlo-obraz {
+		background-image:url("./grafika/proces-bg.jpg");
+		background-size:100% auto;
+		background-position:center 61%;
+	}
+	.nasza-praca  section {
+		background-color:white;
+		background: rgba(255, 255, 255, 0.8);
+		padding:0 1em;
+	}
+	.nasza-praca  p {
+		margin: 1em 0;
+		text-align:left;
+	}
+	.nasza-praca li {
+		margin-left: 1em;
+		padding-left: 1em;
+		text-align:left;
+	}
+	.nasza-praca footer {
+		width:100%;
+		padding: 1em 2em;
+	}
+	.nasza-praca footer > div {
+		color: #ff5200;
+		border-top:solid 2px #ff5200;
+		width:100%;
+		height: 3.5em;
+	}
+	@media (max-width:1200px) {
+		.nasza-praca.tlo-obraz {
+			background-size:auto 55%;
+		}
+	}
+	@media (max-width:800px) {
+		.nasza-praca.tlo-obraz {
+			background-image:none;
+		}
+	}
+/* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
+.zyski img {
+	display:block;
+	margin:0 auto;
+}
+.zyski {
+	text-align:center;
+}
+
+/* 4.0 Stopka g³ówna */
+	.stopka-glowna {
+		background-color:#737373;
+		color:#fff;
+		background-image:url(./grafika/kontakt-lw-bg.jpg), url(./grafika/kontakt-prw-bg.jpg);
+		background-position: left top, right top;
+		background-repeat:no-repeat;
+		background-size:20%;
+		margin-top:4em;
+	}
+	#kontakt {
+		padding:4em 2em 2em;
+	}
+	#kontakt .flex-2kol {
+		-webkit-justify-content:space-between;
+		justify-content:space-between;
+	}
+	#kontakt .flex-2kol > * {
+		margin:0;
+		text-align: left;
+	}
+	.stopka-glowna h2 {
+		border:none;
+		color:#fff;
+		padding:0 0 1em;
+		margin:0;
+	}
+	.stopka-glowna a {
+		color:#fff;
+		font-style:normal;
+		text-transform:none;
+		padding:0 0 0 1em;
+	}
+	.stopka-glowna strong, .stopka-glowna h5 , .stopka-glowna label{
+		text-transform: uppercase;
+		font-style: normal;
+		font-weight: 500;
+	}
+	.stopka-glowna  p {
+		padding-bottom:1em;
+		margin: 0;
+		text-align:left;
+	}
+	address {
+		float:right;
+		width:100%;
+	}
+	address p {
+		text-align:right;		
+	}
+	address a:hover, address a:focus, address a:active {
+		color: #ff6300;
+	}
+	.stopka-glowna img {
+		padding-top:2em;
+		margin: 1em 0;
+		max-width: 206px;
+		width: 100%;
+		float:right;
+	}
+	.stopka-glowna .flex-kol {
+		-webkit-justify-content:space-between;
+		justify-content:space-between;
+	}
+	.stopka-glowna form h5 {
+		margin-top:0;
+		text-align:left;
+	}
+	@media (min-width:801px) {
+		#kontakt form {
+			order:1;
+		}
+	}
+	.stopka-glowna form .flex-2kol {
+		margin-top:1em;
+	}
+	.stopka-glowna  input {
+		margin:1em 0;
+		padding:0.5em;
+		background-color:#fff;
+		line-height:1em;
+		border:none;
+	}
+	.stopka-glowna  input[type="tel"], .stopka-glowna  input[type="email"] {
+		width:15em;
+		max-width:100%;
+	}
+	.stopka-glowna  input[type="submit"] {
+		text-transform: uppercase;
+		padding:0.5em 1em;
+		margin:0;
+	}
+	@media (max-width:800px) {
+		.stopka-glowna {
+			background-image:none;
+		}
+		#kontakt {
+			padding:1em;
+		}
+		.stopka-glowna .flex-kol {
+			-webkit-justify-content:space-between;
+			justify-content:space-between;
+		}
+		#kontakt .flex-2kol > * {
+			margin:auto;					
+		}
+		#kontakt .flex-kol  {
+			-webkit-display:flex;
+			-webkit-flex-direction:row;
+			display:flex;
+			flex-direction:row;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+		#kontakt .flex-2kol .dane-kontaktowe {
+			margin-top:3em;
+		}
+		.dane-kontaktowe > address{
+			width:68%;
+			margin:auto;
+		}
+		 .dane-kontaktowe > img{
+			width:30%;
+			margin:auto;
+			padding-top:0;
+			padding-bottom:1em;
+		}
+		.stopka-glowna  label {
+			margin:1em 0;
+			padding:0.5em 0.5em 0.5em 0;
+		}
+		.stopka-glowna  .active-btn {
+			float:right;
+			margin-right: 1px;
+		}
+		.stopka-glowna form .flex-kol {
+			width:100%;
+		}
+	}
+	@media (max-width:350px) {
+		#kontakt {
+			padding:0;
+		}
+		.dane-kontaktowe > address, .dane-kontaktowe > img{
+			width:98%;
+			margin: auto;
+			display: block;
+			float: none;
+		}
+		#kontakt .flex-kol {
+			display:block;
+		}
+		#kontakt label, #kontakt input {
+			display:block;
+			margin: auto;
+			display: block;
+			text-align: center;
+		}
+		 #kontakt .flex-kol input {
+			 margin-bottom:1em;
+		 }
+		#kontakt .flex-2kol form {
+			text-align:center;
+		}
+		.stopka-glowna  .active-btn {
+			float:none;
+		}
+		.stopka-glowna input[type="submit"] {
+			 margin-top:1em;
+		 }
+		 #kontakt address {
+			 margin:2em 0;
+		 }
+		.stopka-glowna address p {
+			 text-align:center;
+		 }
+	}
+/* 5.0 Responsywnoœæ */
+@media (max-width:900px) {
+	body {
+		font-size:14px;
+		}
+	}
+@media (max-width:700px) {
+	body {
+		font-size:12px;
+		}
+	.center-tresc {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		}
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0.5em 0;
+		}
+	}
+@media (max-width:400px) {
+	body {
+		font-size:10px;
+		}
+	.center-tresc {
+		padding:10px 5px;
+		}
+	}
+
