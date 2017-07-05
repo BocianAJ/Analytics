@@ -61,6 +61,9 @@
 		font-size: 1em;
 	}
 	section {
+		padding:1em 0 2em;
+	}
+	main > section {
 		padding:4em 0 0;
 	}
 
@@ -149,7 +152,6 @@
 	button.kolko {
 		width: 2em;
 		height: 2em;
-		margin: 1em;
 		border-radius: 1em;
 		background-color: #8A8A8A;
 		color: #fff;
@@ -159,6 +161,12 @@
 		-webkit-align-self: flex-end;
 		transition: background-color ease 1s;
 		padding:0;
+	}
+	button.kolko.do-gory {
+		padding-bottom: 0.1em;
+	}
+	button.kolko.do-dolu {
+		padding-top: 0.1em;
 	}
 	button.kolko:hover, button.kolko:focus, button.kolko:active {
 		background-color:#ff5200;
@@ -407,9 +415,11 @@
 /* 	3.1 Sekcja header */
 	.sekcja-header {
 		background-image:url("./grafika/headermobile-bg.jpg");
-		padding:6% 0 0;
+		padding:4em 0;
 		background-size:contain;
 		background-position: center 25%;
+		position:relative;
+		top:2em;
 	}
 	.sekcja-header  p {
 		padding:0 0 2em;
@@ -462,6 +472,7 @@
 		}
 	}
 /* 	3.2 Sekcja Oferta */
+
 	#oferta footer {
 		margin-top:2em;
 		background-image: url("./grafika/napisz.jpg");
@@ -479,6 +490,9 @@
 		margin-right:auto;
 	}
 /* 	 	3.2.1 Podsekcja 'Lorem ipsum' */
+		#oferta .wiecej, #oferta .mniej {
+			margin-top:1em;
+		}
 		#oferta .sekcja-poziom2:first-of-type .sekcja-poziom3 > img {
 			width: 30%;
 			max-height: 60px;
@@ -561,9 +575,6 @@
 		font-size:3em;
 		font-weight:300;
 		display:block;
-	}
-	.statystyki > div.flex-opakowanie:first-of-type {
-		padding-bottom:2em;
 	}
 	.statystyki section.sekcja-poziom3 {
 		margin:0;
@@ -648,6 +659,7 @@
 		background-image:url("./grafika/wyroznia-nas-bg.png");
 		background-position:center;
 		background-size:100%;
+		padding-bottom:1em;
 	}
 	.wyroznia-nas section {
 		padding:2em;
@@ -675,7 +687,7 @@
 	#dlaczego-my footer {
 		background-image:url("./grafika/zadzwon.jpg");
 		position: relative;
-		margin-top: 6em;
+		margin-top: 4em;
 	}
 	#dlaczego-my footer h3 {
 		text-transform: none;
@@ -733,6 +745,9 @@
 	
 /*  3.4 Sekcja "Proces' */
 /* 	 3.3.1 Podsekcja 'Jak wygl¹da nasza praca' */
+	.nasza-praca.sekcja-poziom2 	{
+		padding-bottom:1em;
+	}
 	.nasza-praca .sekcja-poziom3.flex-kol {
 		justify-content: space-between;
 		-webkit-justify-content: space-between;
@@ -753,7 +768,7 @@
 	.nasza-praca  section {
 		background-color:white;
 		background: rgba(255, 255, 255, 0.8);
-		padding:0 1em;
+		padding:1.5em 1em;
 	}
 	.nasza-praca  p {
 		margin: 1em 0;
@@ -785,13 +800,13 @@
 		}
 	}
 /* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
-.zyski img {
-	display:block;
-	margin:0 auto;
-}
-.zyski {
-	text-align:center;
-}
+	.zyski img {
+		display:block;
+		margin:0 auto;
+	}
+	.zyski {
+		text-align:center;
+	}
 
 /* 4.0 Stopka g³ówna */
 	.stopka-glowna {
@@ -801,7 +816,7 @@
 		background-position: left top, right top;
 		background-repeat:no-repeat;
 		background-size:20%;
-		margin-top:4em;
+		margin-top:3em;
 	}
 	#kontakt {
 		padding:4em 2em 2em;
@@ -849,7 +864,7 @@
 	.stopka-glowna img {
 		padding-top:2em;
 		margin: 1em 0;
-		max-width: 206px;
+		max-width: 165px;
 		width: 100%;
 		float:right;
 	}
