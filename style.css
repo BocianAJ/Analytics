@@ -495,6 +495,9 @@
 		#oferta .wiecej, #oferta .mniej {
 			margin-top:1em;
 		}
+		.wiecej > .przycisk, .mniej > .przycisk, {
+			width: 6em;
+		}
 		#oferta .sekcja-poziom2:first-of-type .sekcja-poziom3 > img {
 			width: 30%;
 			max-height: 60px;
