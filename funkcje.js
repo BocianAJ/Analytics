@@ -29,3 +29,24 @@ function toggleContent(clickedElement) {
 		clickedElement.classList.add("wiecej");
 	}
 }
+
+function showContent(clickedElementA) {
+	var contentA = clickedElementA.nextElementSibling;
+	if (contentA.classList.contains("hidden-js")) {
+		contentA.style.display = "block";
+		clickedElementA.style.display = "none";
+		if (contentA.nextElementSibling.classList.contains("do-gory")) {
+			contentA.nextElementSibling.style.display = "inline-block";
+		}
+	}
+}
+function hideContent(clickedElementB) {
+	var contentB = clickedElementB.previousElementSibling;
+	if (contentB.classList.contains("hidden-js")) {
+		contentB.style.display = "none";
+		clickedElementB.style.display = "none";
+		if (contentB.previousElementSibling.classList.contains("do-dolu")) {
+			contentB.previousElementSibling.style.display = "inline-block";
+		}
+	}
+}

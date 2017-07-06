@@ -161,6 +161,8 @@
 		-webkit-align-self: flex-end;
 		transition: background-color ease 1s;
 		padding:0;
+		position: relative;
+		margin-right: 0;
 	}
 	button.kolko.do-gory {
 		padding-bottom: 0.1em;
