@@ -32,21 +32,29 @@ function toggleContent(clickedElement) {
 
 function showContent(clickedElementA) {
 	var contentA = clickedElementA.nextElementSibling;
+	var contentBoxes = querySelectorAll("#abonamenty > div.flex-opakowanie");
 	if (contentA.classList.contains("hidden-js")) {
 		contentA.style.display = "block";
 		clickedElementA.style.display = "none";
 		if (contentA.nextElementSibling.classList.contains("do-gory")) {
 			contentA.nextElementSibling.style.display = "block";
 		}
+		for (i in contenBoxes) {
+			contentBoxes[i].classList.add("flex-rowna-wysokosc");
+		}
 	}
 }
 function hideContent(clickedElementB) {
 	var contentB = clickedElementB.previousElementSibling;
+	var contentBoxes = querySelectorAll("#abonamenty > div.flex-opakowanie");
 	if (contentB.classList.contains("hidden-js")) {
 		contentB.style.display = "none";
 		clickedElementB.style.display = "none";
 		if (contentB.previousElementSibling.classList.contains("do-dolu")) {
 			contentB.previousElementSibling.style.display = "block";
+		}
+		for (i in contenBoxes) {
+			contentBoxes[i].classList.remove("flex-rowna-wysokosc");
 		}
 	}
 }

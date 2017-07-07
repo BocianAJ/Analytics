@@ -565,7 +565,7 @@
 			    flex-wrap: nowrap;			
 		}
 /*	 	 3.2.2 Podsekcja 'Abonamenty' */
-		#abonamenty > div.flex-opakowanie {
+		.flex-rowna-wysokosc {
 			-webkit-box-align: start;
 			    -ms-flex-align: start;
 			        align-items: flex-start;
