@@ -3,11 +3,11 @@
 /*   1.1 Style jednorazowe */
 /*   1.2 Style wielorazowe */
 /*    1.2.1 Flex */
-/*    1.2.2 T³o-obraz */
+/*    1.2.2 Tło-obraz */
 /*    1.2.3 Dynamiczny kontent */
-/* 2.0 Header g³ówny */
-/* 	 2.1 Menu g³ówne */
-/* 3.0 Kontent g³ówny */
+/* 2.0 Header główny */
+/* 	 2.1 Menu główne */
+/* 3.0 Kontent główny */
 /* 	3.1 Sekcja header */
 /* 	3.2 Sekcja Oferta */
 /* 	 3.2.1 Podsekcja 'Lorem ipsum' */
@@ -22,7 +22,7 @@
 /* 	 3.3.1 Podsekcja 'Jak wygl¹da nasza praca' */
 /* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
 /*  3.5 Sekcja "Kontakt' */
-/* 4.0 Stopka g³ówna */
+/* 4.0 Stopka główna */
 /* 5.0 Responsywnoœæ*/
 
 
@@ -307,7 +307,7 @@
 			clear:both;
 			display:table;
 		  }
-/*  	1.2.2 T³o-obraz */
+/*  	1.2.2 Tło-obraz */
 		.tlo-obraz {
 			background-repeat:no-repeat;
 			background-size:cover;
@@ -317,7 +317,7 @@
 		.ukryty-content, .js-content {
 			display:none;
 		}
-/* 2.0 Header g³ówny */
+/* 2.0 Header główny */
 	.header-glowny {
 		border-bottom:solid 1px #cfcfcf;
 		position: fixed;
@@ -339,7 +339,7 @@
 		    -ms-flex-pack:justify;
 		        justify-content:space-between;
 	}
-/*	2.1 Menu g³ówne */
+/*	2.1 Menu główne */
 	.header-glowny a {
 		font-weight:600;
 		padding-top:0;
@@ -447,7 +447,7 @@
 			transition:transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 		}
 	}
-/* 3.0 Kontent g³ówny */
+/* 3.0 Kontent główny */
 	.header-glowny div.center-tresc {
 		padding-top:0;
 		padding-bottom:0;
@@ -564,12 +564,6 @@
 			    flex-wrap: nowrap;			
 		}
 /*	 	 3.2.2 Podsekcja 'Abonamenty' */
-		#abonamenty > div.flex-opakowanie {
-			-webkit-box-align: start;
-			    -ms-flex-align: start;
-			        align-items: flex-start;
-			-webkit-align-items: flex-start;
-		}
 		#abonamenty .sekcja-poziom3{
 			padding:1em 2em 3em;
 			border:solid 2px #8a8a8a;
@@ -886,7 +880,7 @@
 		text-align:center;
 	}
 
-/* 4.0 Stopka g³ówna */
+/* 4.0 Stopka główna */
 	.stopka-glowna {
 		background-color:#737373;
 		color:#fff;
