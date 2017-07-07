@@ -36,7 +36,7 @@ function showContent(clickedElementA) {
 		contentA.style.display = "block";
 		clickedElementA.style.display = "none";
 		if (contentA.nextElementSibling.classList.contains("do-gory")) {
-			contentA.nextElementSibling.style.display = "inline-block";
+			contentA.nextElementSibling.style.display = "block";
 		}
 	}
 }
@@ -46,7 +46,7 @@ function hideContent(clickedElementB) {
 		contentB.style.display = "none";
 		clickedElementB.style.display = "none";
 		if (contentB.previousElementSibling.classList.contains("do-dolu")) {
-			contentB.previousElementSibling.style.display = "inline-block";
+			contentB.previousElementSibling.style.display = "block";
 		}
 	}
 }
