@@ -185,13 +185,14 @@
 		transition: background-color ease-out 0.5s;
 	}
 	.czerw-blask, .czarn-pogrub {
-		font-size:2.5em;
+		font-size:2.2em;
 		font-weight:600;
 		vertical-align: middle;
 	}
 	.czerw-blask {
 		color:#ff5200;
 		text-shadow:0 0 10px #ffb900;
+		padding-right: 0.3em;
 	}
 	.czarn-pogrub {
 		color:#292929;
@@ -564,6 +565,12 @@
 			    flex-wrap: nowrap;			
 		}
 /*	 	 3.2.2 Podsekcja 'Abonamenty' */
+		#abonamenty > div.flex-opakowanie {
+			-webkit-box-align: start;
+			    -ms-flex-align: start;
+			        align-items: flex-start;
+			-webkit-align-items: flex-start;
+		}
 		#abonamenty .sekcja-poziom3{
 			padding:1em 2em 3em;
 			border:solid 2px #8a8a8a;
