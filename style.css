@@ -1,13 +1,13 @@
-/* Spis treœci: */
-/* 1.0 Style ogólne */
+/* Spis treÅ“ci: */
+/* 1.0 Style ogÃ³lne */
 /*   1.1 Style jednorazowe */
 /*   1.2 Style wielorazowe */
 /*    1.2.1 Flex */
-/*    1.2.2 T³o-obraz */
+/*    1.2.2 TÂ³o-obraz */
 /*    1.2.3 Dynamiczny kontent */
-/* 2.0 Header g³ówny */
-/* 	 2.1 Menu g³ówne */
-/* 3.0 Kontent g³ówny */
+/* 2.0 Header gÂ³Ã³wny */
+/* 	 2.1 Menu gÂ³Ã³wne */
+/* 3.0 Kontent gÂ³Ã³wny */
 /* 	3.1 Sekcja header */
 /* 	3.2 Sekcja Oferta */
 /* 	 3.2.1 Podsekcja 'Lorem ipsum' */
@@ -15,18 +15,18 @@
 /* 	 3.2.3 Podsekcja 'Stopka' */
 /* 	3.3 Sekcja 'Dlaczego My' */
 /* 	 3.3.1 Podsekcja 'Lorem ipsum' */
-/* 	 3.3.2 Podsekcja 'Wyró¿nia nas' */
+/* 	 3.3.2 Podsekcja 'WyrÃ³Â¿nia nas' */
 /* 	 3.3.3 Podsekcja 'Referencje' */
 /* 	 3.3.4 Podsekcja 'Stopka' */
 /*  3.4 Sekcja "Proces' */
-/* 	 3.3.1 Podsekcja 'Jak wygl¹da nasza praca' */
-/* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
+/* 	 3.3.1 Podsekcja 'Jak wyglÂ¹da nasza praca' */
+/* 	 3.3.2 Podsekcja 'Co moÂ¿esz zyskaÃ¦' */
 /*  3.5 Sekcja "Kontakt' */
-/* 4.0 Stopka g³ówna */
-/* 5.0 Responsywnoœæ*/
+/* 4.0 Stopka gÂ³Ã³wna */
+/* 5.0 ResponsywnoÅ“Ã¦*/
 
 
-/* 1.0 Style ogólne */
+/* 1.0 Style ogÃ³lne */
 /*   1.1 Style jednorazowe */
 	* {
 		box-sizing:border-box;
@@ -289,7 +289,7 @@
 			clear:both;
 			display:table;
 		  }
-/*  	1.2.2 T³o-obraz */
+/*  	1.2.2 TÂ³o-obraz */
 		.tlo-obraz {
 			background-repeat:no-repeat;
 			background-size:cover;
@@ -299,7 +299,7 @@
 		.ukryty-content, .js-content {
 			display:none;
 		}
-/* 2.0 Header g³ówny */
+/* 2.0 Header gÂ³Ã³wny */
 	.header-glowny {
 		border-bottom:solid 1px #cfcfcf;
 		position: fixed;
@@ -320,7 +320,7 @@
 		-webkit-justify-content:space-between;
 		justify-content:space-between;
 	}
-/*	2.1 Menu g³ówne */
+/*	2.1 Menu gÂ³Ã³wne */
 	.header-glowny a {
 		font-weight:600;
 		padding-top:0;
@@ -407,7 +407,7 @@
 			transition:transform 0.5s ease-out;
 		}
 	}
-/* 3.0 Kontent g³ówny */
+/* 3.0 Kontent gÂ³Ã³wny */
 	.header-glowny div.center-tresc {
 		padding-top:0;
 		padding-bottom:0;
@@ -502,6 +502,8 @@
 			width: 30%;
 			max-height: 60px;
 			max-width: 60px;
+			min-width:5em;
+			min-height:5em;
 			padding-right: 1em;
 		}
 		@media (max-width:800px) {
@@ -659,7 +661,7 @@
 		}
 	}
 
-/* 	 3.3.2 Podsekcja 'Wyró¿nia nas' */
+/* 	 3.3.2 Podsekcja 'WyrÃ³Â¿nia nas' */
 	section.wyroznia-nas {
 		background-image:url("./grafika/wyroznia-nas-bg.png");
 		background-position:center;
@@ -749,7 +751,7 @@
 	}
 	
 /*  3.4 Sekcja "Proces' */
-/* 	 3.3.1 Podsekcja 'Jak wygl¹da nasza praca' */
+/* 	 3.3.1 Podsekcja 'Jak wyglÂ¹da nasza praca' */
 	.nasza-praca.sekcja-poziom2 	{
 		padding-bottom:1em;
 	}
@@ -804,7 +806,7 @@
 			background-image:none;
 		}
 	}
-/* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
+/* 	 3.3.2 Podsekcja 'Co moÂ¿esz zyskaÃ¦' */
 	.zyski img {
 		display:block;
 		margin:0 auto;
@@ -813,7 +815,7 @@
 		text-align:center;
 	}
 
-/* 4.0 Stopka g³ówna */
+/* 4.0 Stopka gÂ³Ã³wna */
 	.stopka-glowna {
 		background-color:#737373;
 		color:#fff;
@@ -990,7 +992,7 @@
 			 text-align:center;
 		 }
 	}
-/* 5.0 Responsywnoœæ */
+/* 5.0 ResponsywnoÅ“Ã¦ */
 @media (max-width:900px) {
 	body {
 		font-size:14px;
