@@ -437,7 +437,7 @@
 			padding:1em;
 			font-size: 1.5em;
 		}
-		nav:hover:before, nav:focus:before, nav:active:before {
+		nav:hover:before, nav:active:before, nav:focus:before{
 			-webkit-transform: scale(0);
 			    -ms-transform: scale(0);
 			        transform: scale(0);
@@ -850,7 +850,7 @@
 		padding:1.5em 1em;
 	}
 	.nasza-praca  p {
-		margin: 1em 0;
+		margin: 1em auto;
 		text-align:left;
 	}
 	.nasza-praca li {
