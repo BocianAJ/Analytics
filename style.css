@@ -479,10 +479,9 @@
 		background: linear-gradient(to left ,rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,1));
 	}
 	.naglowek .flex-opakowanie {
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-		-webkit-justify-content: center;
+		    -ms-flex-pack: distribute;
+		        justify-content: space-around;
+		-webkit-justify-content: space-around;
 	}
 	.sekcja-header a {
 		margin-bottom:1em;
@@ -548,6 +547,7 @@
 		}
 		#oferta .sekcja-poziom2:first-of-type .sekcja-poziom3 > img {
 			width: 30%;
+			height:30%;
 			max-height: 60px;
 			max-width: 60px;
 			min-width:4em;
@@ -615,9 +615,9 @@
 			width:100%;
 			left:0;
 			bottom: -23px;
-			-webkit-box-pack:center;
-			    -ms-flex-pack:center;
-			        justify-content:center;
+			-webkit-box-pack:start;
+			-ms-flex-pack:start;
+			justify-content:flex-start;
 		} 
 
 /* 	 3.2.3 Podsekcja 'Stopka' */
@@ -934,7 +934,7 @@
 		float:right;
 		width:100%;
 	}
-	address p {
+	.stopka-glowna address p {
 		text-align:right;		
 	}
 	address a:hover, address a:focus, address a:active {
@@ -944,7 +944,9 @@
 		padding-top:2em;
 		margin: 1em 0;
 		max-width: 165px;
-		width: 100%;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
 		float:right;
 	}
 	.stopka-glowna .flex-kol {
@@ -1035,7 +1037,7 @@
 			width:100%;
 		}
 	}
-	@media (max-width:350px) {
+	@media (max-width:360px) {
 		#kontakt {
 			padding:0;
 		}
