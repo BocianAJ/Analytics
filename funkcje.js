@@ -32,29 +32,36 @@ function toggleContent(clickedElement) {
 
 function showContent(clickedElementA) {
 	var contentA = clickedElementA.nextElementSibling;
-	var contentBoxes = document.querySelectorAll("#abonamenty > div.flex-opakowanie");
 	if (contentA.classList.contains("hidden-js")) {
 		contentA.style.display = "block";
 		clickedElementA.style.display = "none";
 		if (contentA.nextElementSibling.classList.contains("do-gory")) {
 			contentA.nextElementSibling.style.display = "block";
+			document.querySelector("#abonamenty > div.flex-opakowanie").classList.add("flex-rowna-wysokosc");
 		}
-		for (i in contentBoxes) {
-			contentBoxes[i].classList.add("flex-rowna-wysokosc");
-		}
+			
 	}
 }
 function hideContent(clickedElementB) {
+	console.log(clickedElementB);
 	var contentB = clickedElementB.previousElementSibling;
-	var contentBoxes = document.querySelectorAll("#abonamenty > div.flex-opakowanie");
 	if (contentB.classList.contains("hidden-js")) {
 		contentB.style.display = "none";
 		clickedElementB.style.display = "none";
 		if (contentB.previousElementSibling.classList.contains("do-dolu")) {
 			contentB.previousElementSibling.style.display = "block";
-		}
-		for (i in contentBoxes) {
-			contentBoxes[i].classList.remove("flex-rowna-wysokosc");
+			console.log(contentB.previousElementSibling);
+			var contentBoxes = document.querySelector("#abonamenty > div.flex-opakowanie");
+			var boxCount = document.querySelectorAll(".do-gory");
+			var checkCount = 0;
+			for (x=0; x < boxCount.length; x++) {	
+				if (boxCount[x].style.display == "none") {
+					checkCount += 1;
+				}		
+			}
+			if (checkCount == 3) {
+				contentBoxes.classList.remove("flex-rowna-wysokosc");
+			}	
 		}
 	}
 }
