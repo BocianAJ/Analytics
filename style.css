@@ -237,8 +237,8 @@
 			    -ms-flex-align: start;
 			        align-items: flex-start;
 			-webkit-box-pack:start;
-			    -ms-flex-pack:start;
-			        justify-content:flex-start;
+			-ms-flex-pack:start;
+			justify-content:flex-start;
 			text-align:center;
 		  }
 		  .flex-kol > * {
@@ -378,6 +378,9 @@
 		transition:transform 0.5s ease-out;
 		transition:transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 	}
+	.mobile-menu {
+		display:none;
+	}
 	@media (max-width:800px) {
 		nav  {
 			padding:0 1em;
@@ -395,12 +398,12 @@
 			top: 0;
 			bottom:0;
 			right: 0;
-			height: auto;
-			padding: 0;
 			line-height: initial;
-			margin:0.5em;
+			padding:0.5em;
+			margin-right: 1em;
 			cursor:pointer;
 			width:3em;
+			height: auto;
 		}
 		nav a {
 			display: list-item;
@@ -409,19 +412,19 @@
 			display:list-item;
 			visibility:hidden;
 		}
-		nav:before {
-			content: url("./grafika/ikony/mobile-menu.svg");
+		.mobile-menu {
 			color: #8A8A8A;
 			display: block;
 			width: 3em;
 			height: auto;
-			margin: auto;
+			margin: 0;
 			-webkit-transition:-webkit-transform 1s ease-in;
 			transition:-webkit-transform 1s ease-in;
 			-o-transition:transform 1s ease-in;
 			transition:transform 1s ease-in;
 			transition:transform 1s ease-in, -webkit-transform 1s ease-in;
 			float:right;
+			cursor:pointer;
 		}
 		nav:hover, nav:focus, nav:active {
 			bottom:auto;
@@ -436,7 +439,7 @@
 			padding:1em;
 			font-size: 1.5em;
 		}
-		nav:hover:before, nav:active:before, nav:focus:before{
+		nav:hover + .mobile-menu, nav:focus + .mobile-menu , nav:active + .mobile-menu, .mobile-menu:hover, .mobile-menu:focus, .mobile-menu:active {
 			-webkit-transform: scale(0);
 			    -ms-transform: scale(0);
 			        transform: scale(0);
@@ -686,6 +689,8 @@
 		-webkit-align-items:flex-end;
 		-ms-flex-line-pack: end;
 		    align-content: flex-end;
+		-ms-flex-wrap: nowrap; 
+		flex-wrap: nowrap;
 		width:100%;
 		}
 	.statystyki section.sekcja-poziom3:nth-of-type(1) .rama > div > * {
@@ -741,8 +746,9 @@
 	.referencje img {
 		padding: 2em;
 		margin-bottom: 1em;
-		height: 6em;
-		max-width: 220px;
+		height: 2em;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
 	}
 /* 	 3.3.4 Podsekcja 'Stopka' */
 	#dlaczego-my footer {
@@ -754,6 +760,7 @@
 		text-transform: none;
 		position:relative;
 		z-index: 1;
+		padding:1.5em 1em;
 	}
 	#dlaczego-my footer h3.flex-opakowanie > * {
 		width:30%;
@@ -793,14 +800,14 @@
 	#dlaczego-my footer img {
 		position: absolute;
 		bottom: 0;
-		width: 12em;
+		width: 16em;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 		display:-webkit-flex;
 		left: 0;
 		right: 0;
-		margin: auto;
+		margin: 0 auto;
 	}
 		@media (max-width:450px) {
 		#dlaczego-my footer {
@@ -919,6 +926,7 @@
 		font-style:normal;
 		text-transform:none;
 		padding:0 0 0 1em;
+		transition: 1s;
 	}
 	.stopka-glowna strong, .stopka-glowna h5 , .stopka-glowna label{
 		text-transform: uppercase;
@@ -938,7 +946,9 @@
 		text-align:right;		
 	}
 	address a:hover, address a:focus, address a:active {
-		color: #ff6300;
+		font-weight: 600;
+		transform: scale(1.1);
+		transition: 1s;
 	}
 	.stopka-glowna img {
 		padding-top:2em;
