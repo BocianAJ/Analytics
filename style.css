@@ -367,6 +367,7 @@
 		line-height: 4em;
 		vertical-align: top;
 		padding:0 2em;
+		background:transparent;
 	}
 	a.tel:focus, a.tel:hover, a.tel:active {
 		-webkit-transform:scale(1.1);
@@ -418,11 +419,6 @@
 			width: 3em;
 			height: auto;
 			margin: 0;
-			-webkit-transition:-webkit-transform 1s ease-in;
-			transition:-webkit-transform 1s ease-in;
-			-o-transition:transform 1s ease-in;
-			transition:transform 1s ease-in;
-			transition:transform 1s ease-in, -webkit-transform 1s ease-in;
 			float:right;
 			cursor:pointer;
 		}
@@ -431,23 +427,13 @@
 			padding:0 0 1em;
 			border: 1px solid #ff6300;
 			margin:1px;
-			background: rgba(255,255,255,0.95);
+			background: rgb(255,255,255);
 			width:auto;
 		}
 		nav:hover a, nav:focus a, nav:active a {
 			visibility:visible;
 			padding:1em;
 			font-size: 1.5em;
-		}
-		nav:hover + .mobile-menu, nav:focus + .mobile-menu , nav:active + .mobile-menu, .mobile-menu:hover, .mobile-menu:focus, .mobile-menu:active {
-			-webkit-transform: scale(0);
-			    -ms-transform: scale(0);
-			        transform: scale(0);
-			-webkit-transition:-webkit-transform 0.5s ease-out;
-			transition:-webkit-transform 0.5s ease-out;
-			-o-transition:transform 0.5s ease-out;
-			transition:transform 0.5s ease-out;
-			transition:transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 		}
 	}
 /* 3.0 Kontent główny */
