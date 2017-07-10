@@ -435,8 +435,7 @@
 			position:absolute;
 			top:0;
 			right:0;
-			z-index:1;
-			visibility:hidden;
+			z-index:-1;
 		}
 		nav:hover, nav:focus, nav:active, .mobile-menu:hover + nav, .mobile-menu:focus + nav, .mobile-menu:active + nav {
 			display:block;
