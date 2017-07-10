@@ -396,23 +396,26 @@
 			display:none;
 		}
 		nav {
+			display:none;
 			position: absolute;
 			top: 0;
-			bottom:0;
 			right: 0;
 			line-height: initial;
-			padding:0.5em;
-			margin-right: 1em;
 			cursor:pointer;
-			width:3em;
 			height: auto;
+			bottom:auto;
+			padding:0 0 1em;
+			border: 1px solid #ff6300;
+			margin:1px;
+			background: rgb(255,255,255);
+			width:auto;
 		}
-		nav a {
-			display: list-item;
+		.header-glowny nav a {
 			list-style: none;
 			text-align: left;
 			display:list-item;
-			visibility:hidden;
+			padding:1em;
+			font-size: 1.5em;
 		}
 		.mobile-menu {
 			color: #8A8A8A;
@@ -423,19 +426,13 @@
 			float:right;
 			cursor:pointer;
 		}
-		nav:hover, nav:focus, nav:active {
+		nav:hover, nav:focus, nav:active, .mobile-menu:hover + nav, .mobile-menu:focus + nav, .mobile-menu:active + nav {
+			display:block;
 			bottom:auto;
-			padding:0 0 1em;
+			padding:1em 0;
 			border: 1px solid #ff6300;
 			margin:1px;
-			background: rgb(255,255,255);
-			transition:1s background;
 			width:auto;
-		}
-		nav:hover a, nav:focus a, nav:active a {
-			visibility:visible;
-			padding:1em;
-			font-size: 1.5em;
 		}
 	}
 /* 3.0 Kontent główny */
