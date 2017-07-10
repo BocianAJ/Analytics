@@ -15,12 +15,12 @@
 /* 	 3.2.3 Podsekcja 'Stopka' */
 /* 	3.3 Sekcja 'Dlaczego My' */
 /* 	 3.3.1 Podsekcja 'Lorem ipsum' */
-/* 	 3.3.2 Podsekcja 'Wyró¿nia nas' */
+/* 	 3.3.2 Podsekcja 'Wyróżnia nas' */
 /* 	 3.3.3 Podsekcja 'Referencje' */
 /* 	 3.3.4 Podsekcja 'Stopka' */
 /*  3.4 Sekcja "Proces' */
 /* 	 3.3.1 Podsekcja 'Jak wygl¹da nasza praca' */
-/* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
+/* 	 3.3.2 Podsekcja 'Co możesz zyskć' */
 /*  3.5 Sekcja "Kontakt' */
 /* 4.0 Stopka główna */
 /* 5.0 Responsywnoœæ*/
@@ -720,7 +720,7 @@
 		}
 	}
 
-/* 	 3.3.2 Podsekcja 'Wyró¿nia nas' */
+/* 	 3.3.2 Podsekcja 'Wyróżnia nas' */
 	section.wyroznia-nas {
 		background-image:url("./grafika/wyroznia-nas-bg.png");
 		background-position:center;
@@ -821,7 +821,7 @@
 		}
 		#dlaczego-my footer img {
 			position: relative;
-			width:10em;
+			width:13em;
 		}
 	}
 	
@@ -884,7 +884,7 @@
 			background-image:none;
 		}
 	}
-/* 	 3.3.2 Podsekcja 'Co mo¿esz zyskaæ' */
+/* 	 3.3.2 Podsekcja 'Co możesz zyskć' */
 	.zyski img {
 		display:block;
 		margin:0 auto;
