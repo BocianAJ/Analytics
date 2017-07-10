@@ -368,6 +368,7 @@
 		vertical-align: top;
 		padding:0 2em;
 		background:transparent;
+		transition:1s background;
 	}
 	a.tel:focus, a.tel:hover, a.tel:active {
 		-webkit-transform:scale(1.1);
@@ -428,6 +429,7 @@
 			border: 1px solid #ff6300;
 			margin:1px;
 			background: rgb(255,255,255);
+			transition:1s background;
 			width:auto;
 		}
 		nav:hover a, nav:focus a, nav:active a {
