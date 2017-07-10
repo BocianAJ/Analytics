@@ -422,10 +422,21 @@
 			display: block;	
 			float:right;
 			border:none;
+			width:3em;
+			height:3em;
+			padding:0;
+			position:relative;
 		}
 		.mobile-menu img {
-			width: 3em;
-			height: auto;
+			width: 100%;
+			height: 100%;
+		}
+		.mobile-menu:hover, .mobile-menu:focus, .mobile-menu:active  {
+			position:absolute;
+			top:0;
+			right:0;
+			z-index:1;
+			visibility:hidden;
 		}
 		nav:hover, nav:focus, nav:active, .mobile-menu:hover + nav, .mobile-menu:focus + nav, .mobile-menu:active + nav {
 			display:block;
