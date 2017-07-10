@@ -926,6 +926,8 @@
 		font-style:normal;
 		text-transform:none;
 		padding:0 0 0 1em;
+		-webkit-transition: 1s;
+		-o-transition: 1s;
 		transition: 1s;
 	}
 	.stopka-glowna strong, .stopka-glowna h5 , .stopka-glowna label{
@@ -947,7 +949,11 @@
 	}
 	address a:hover, address a:focus, address a:active {
 		font-weight: 600;
-		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		    -ms-transform: scale(1.1);
+		        transform: scale(1.1);
+		-webkit-transition: 1s;
+		-o-transition: 1s;
 		transition: 1s;
 	}
 	.stopka-glowna img {
