@@ -418,13 +418,14 @@
 			font-size: 1.5em;
 		}
 		.mobile-menu {
-			color: #8A8A8A;
-			display: block;
+			background-color: #fff;
+			display: block;	
+			float:right;
+			border:none;
+		}
+		.mobile-menu img {
 			width: 3em;
 			height: auto;
-			margin: 0;
-			float:right;
-			cursor:pointer;
 		}
 		nav:hover, nav:focus, nav:active, .mobile-menu:hover + nav, .mobile-menu:focus + nav, .mobile-menu:active + nav {
 			display:block;
