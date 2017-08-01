@@ -538,7 +538,7 @@
 		#oferta .wiecej, #oferta .mniej {
 			margin-top:1em;
 		}
-		.wiecej > .przycisk, .mniej > .przycisk, {
+		.wiecej > .przycisk, .mniej > .przycisk {
 			width: 6em;
 		}
 		#oferta .sekcja-poziom2:first-of-type .sekcja-poziom3 > img {
@@ -560,6 +560,9 @@
 			    flex-wrap: nowrap;			
 		}
 /*	 	 3.2.2 Podsekcja 'Abonamenty' */
+		#abonamenty {
+			padding-bottom:3em;
+		}
 		.flex-rowna-wysokosc {
 			-webkit-box-align: start;
 			    -ms-flex-align: start;
