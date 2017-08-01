@@ -432,10 +432,7 @@
 			height: 100%;
 		}
 		.mobile-menu:hover, .mobile-menu:focus, .mobile-menu:active  {
-			position:absolute;
-			top:0;
-			right:0;
-			z-index:-1;
+			display:none;
 		}
 		nav:hover, nav:focus, nav:active, .mobile-menu:hover + nav, .mobile-menu:focus + nav, .mobile-menu:active + nav {
 			display:block;
